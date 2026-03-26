@@ -1,0 +1,52 @@
+.body {
+    font-family: Montserrat;
+}
+
+.header {
+    background-image: url(images/header-photo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+    margin: 0 auto;
+    max-width: 1392px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 109px;
+    height: 94px;
+}
+
+.navbar-list {
+    display: flex;
+    flex-direction: row;
+    gap: 84px;
+    font-size: 18px;
+    list-style: none;
+    margin-left: 416px;
+}
+
+.phone-number {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.phone-number img {
+    width: 18px;
+    height: 17px;
+}
+
+.phone-number p {
+    margin: 0%;
+}
+
+.about-us {
+    font-size: 19px;
+    color: #84AE19;
+}
