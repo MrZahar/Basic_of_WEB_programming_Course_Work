@@ -1,16 +1,18 @@
+@import url('fonts/stylesheet.css');
+
 .body {
-    font-family: Montserrat;
+    font-family: "Mont", sans-serif;
 }
 
-.header {
-    background-image: url(images/header-photo.png);
-    background-repeat: no-repeat;
+.header-container {
+    background-image: url(images/header-image-2.png);
     background-size: cover;
+    width: 100%;
 }
 
 .navbar {
     margin: 0 auto;
-    max-width: 1392px;
+    max-width: 1372px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -28,7 +30,7 @@
     gap: 84px;
     font-size: 18px;
     list-style: none;
-    margin-left: 416px;
+    margin-left: 536px;
 }
 
 .phone-number {
@@ -49,4 +51,109 @@
 .about-us {
     font-size: 19px;
     color: #84AE19;
+}
+
+
+.suburban-life {
+    margin-left: 266px;
+    margin-top: 164px;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.number-of-models {
+    margin: 0%;
+    margin-left: 266px;
+    margin-top: 33px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.ready-to-make {
+    margin: 0%;
+    margin-left: 266px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 44px;
+}
+
+.get-a-present {
+    margin: 0%;
+    margin-left: 266px;
+    margin-top: 32px;
+    font-size: 18px;
+    font-weight: 400;
+    width: 252px;
+    height: 64px;
+    background-color:#84AE19;
+    color: white;
+    border-radius: 50px;
+    border: none;
+}
+
+.call {
+    background-color: #84AE19;
+    justify-content: center;
+    align-items: center;
+    width: 88px;
+    height: 89px;
+    justify-self: right;
+    border-radius: 50px;
+    border: none;
+    margin-right: 264px;
+    margin-top: 86px;
+    position: relative;
+}
+
+.call img {
+    position: absolute;
+    padding-top: 27px;
+    padding-left: 27px;
+}
+
+.look-at-bathhouses-container {
+    background-image: url(images/tree.png);
+    background-repeat: no-repeat;
+}
+
+.rectangle {
+    margin-left: 266px;
+    margin-top: 42px;
+    width: 1390px;
+    height: 271px;
+    background-color: white;
+}
+
+.rectangle p {
+    margin-left: 56px;
+    margin-top: 63px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.fields-and-button {
+    margin-left: 56px;
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+}
+
+.fields-and-button input {
+    height: 64px;
+    font-size: 16px;
+    width: 316px;
+    background-color: #F3F3F3;
+    border: none;
+    border-radius: 50px;
+    padding-left: 25px;
+}
+
+.fields-and-button button {
+    height: 64px;
+    width: 261px;
+    font-size: 18px;
+    background-color: #84AE19;
+    border: none;
+    border-radius: 50px;
+    color: white;
 }
