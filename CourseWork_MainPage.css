@@ -27,29 +27,31 @@
 .navbar-list {
     display: flex;
     flex-direction: row;
-    gap: 84px;
-    font-size: 18px;
+    gap: 80px;
+    font-size: 20.5px;
     list-style: none;
-    margin-left: 536px;
+    margin-left: 416px;
 }
 
 .phone-number {
     display: flex;
     flex-direction: row;
+    margin-left: 40px;
     gap: 10px;
 }
 
 .phone-number img {
-    width: 18px;
-    height: 17px;
+    width: 28px;
+    height: 26.92px;
 }
 
 .phone-number p {
     margin: 0%;
+    font-size: 24px;
 }
 
 .about-us {
-    font-size: 19px;
+    font-size: 20.5px;
     color: #84AE19;
 }
 
