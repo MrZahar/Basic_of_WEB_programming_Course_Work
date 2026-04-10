@@ -127,14 +127,15 @@
 }
 
 .rectangle p {
-    margin-left: 56px;
-    margin-top: 63px;
+    margin-left: 58px;
+    margin-top: 148px;
     font-size: 28px;
     font-weight: 700;
 }
 
 .fields-and-button {
-    margin-left: 56px;
+    padding-top: 10px;
+    margin-left: 58px;
     display: flex;
     flex-direction: row;
     gap: 17px;
@@ -143,7 +144,7 @@
 .fields-and-button input {
     height: 64px;
     font-size: 16px;
-    width: 316px;
+    width: 294px;
     background-color: #F3F3F3;
     border: none;
     border-radius: 50px;
@@ -158,4 +159,16 @@
     border: none;
     border-radius: 50px;
     color: white;
+}
+
+.text-buttons-and-picture {
+    display: flex;
+    flex-direction: row;
+}
+
+.text-buttons-and-picture img{
+    width: 388px;
+    height: 274px;
+    margin-top: 78px;
+    margin-left: 76px;
 }
