@@ -501,3 +501,109 @@ body {
 
     box-shadow: 0 5px 8px rgba(132, 174, 25, 0.35);
 }
+
+.features-of-scandinave-technologies {
+    width: 100%;
+    min-height: 1080px;
+
+    padding-top: 184px;
+    padding-bottom: 110px;
+
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+
+    overflow: hidden;
+}
+
+.features-of-scandinave-technologies > p {
+    margin: 0;
+    margin-bottom: 72px;
+
+    font-size: 32px;
+    line-height: 39px;
+    font-weight: 700;
+
+    text-align: center;
+
+    color: #2B2B2B;
+}
+
+.features-of-scandinave-technologies > p span {
+    color: #84AE19;
+    font-weight: 700;
+}
+
+.features {
+    width: 1380px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 320px);
+    gap: 31px 29px;
+}
+
+.feature-rectangle {
+    width: 320px;
+    height: 326px;
+
+    padding: 28px 30px 30px 31px;
+
+    background-color: rgba(255, 255, 255, 0.94);
+
+    border: 1px solid #E3E3E3;
+    border-radius: 12px;
+
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+.number-of-feature {
+    height: 58px;
+
+    display: flex;
+    align-items: flex-start;
+
+    margin-bottom: 18px;
+}
+
+.number-of-feature img {
+    width: 58px;
+    height: 58px;
+
+    object-fit: contain;
+}
+
+.number-of-feature p {
+    margin: 0;
+    margin-left: 16px;
+    margin-top: -4px;
+
+    font-size: 54px;
+    line-height: 58px;
+    font-weight: 700;
+
+    color: rgba(43, 43, 43, 0.07);
+}
+
+.feature-info h2 {
+    margin: 0;
+    margin-bottom: 18px;
+
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+
+    color: #2B2B2B;
+}
+
+.feature-info p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+
+    color: black;
+}
