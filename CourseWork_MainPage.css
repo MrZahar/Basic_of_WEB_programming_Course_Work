@@ -607,3 +607,280 @@ body {
 
     color: black;
 }
+
+.catalogue-of-bathhouses {
+    width: 100%;
+    min-height: 1245px;
+    padding-top: 35px;
+    padding-bottom: 110px;
+    background-color: #FFFFFF;
+}
+
+.catalogue-of-bathhouses > h2 {
+    margin: 0;
+    margin-bottom: 39px;
+
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 700;
+
+    text-align: center;
+
+    color: #2B2B2B;
+}
+
+.catalogue-of-bathhouses > h2 span {
+    color: #84AE19;
+    font-weight: 700;
+}
+
+.catalogue {
+    width: 1390px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 448px);
+    gap: 25px;
+}
+
+.offer {
+    width: 448px;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #E4E4E4;
+    border-radius: 9px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+}
+
+.offer > img:first-child {
+    width: 100%;
+    height: 204px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.name-and-characteristics {
+    display: flex;
+    align-items: center;
+
+    padding: 17px 20px 0;
+}
+
+.name-and-characteristics > h2 {
+    margin: 0;
+    margin-right: auto;
+
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+
+    color: #2B2B2B;
+}
+
+.people-amount,
+.size {
+    display: flex;
+    align-items: center;
+
+    margin-left: 13px;
+}
+
+.people-amount img,
+.size img {
+    width: 13px;
+    height: 13px;
+
+    margin-right: 5px;
+
+    object-fit: contain;
+}
+
+.people-amount p,
+.size p {
+    margin: 0;
+
+    font-size: 11px;
+    line-height: 14px;
+    font-weight: 400;
+
+    color: #84AE19;
+}
+
+.offer > p {
+    margin: 13px 20px 0;
+
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 400;
+
+    color: #606060;
+}
+
+.price-and-buttons {
+    margin: auto 20px 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rectangle-1 {
+    width: 122px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #F5F5F5;
+
+    border-radius: 50px;
+}
+
+.rectangle-1 p {
+    margin: 0;
+
+    font-size: 11px;
+    line-height: 14px;
+    font-weight: 400;
+
+    color: #8A8A8A;
+}
+
+.price-and-buttons button {
+    width: 234px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50px;
+
+    background-color: #84AE19;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 7px rgba(132, 174, 25, 0.28);
+}
+
+.price-and-buttons button p {
+    margin: 0;
+
+    font-size: 11px;
+    line-height: 14px;
+    font-weight: 500;
+
+    color: #FFFFFF;
+}
+
+.videomaterial {
+    position: relative;
+
+    width: 1333px;
+    height: 575px;
+
+    margin: 96px auto 0;
+
+    border-radius: 20px;
+
+    overflow: visible;
+}
+
+.videomaterial > img:first-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 495px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    filter: brightness(0.58);
+}
+
+.videomaterial::after {
+    content: "Уютный дом 64, будем знакомы!";
+    position: absolute;
+    left: 50%;
+    top: 221px;
+    transform: translateX(-50%);
+    z-index: 4;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.display-video {
+    position: absolute;
+    left: 50%;
+    top: 160px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    width: 72px;
+    height: 72px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+.videomaterial::after {
+    content: "Уютный дом 64, будем знакомы!";
+
+    position: absolute;
+    left: 50%;
+    top: 290px;
+
+    transform: translateX(-50%);
+
+    z-index: 4;
+
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+
+    color: #FFFFFF;
+
+    text-align: center;
+}
+
+.worker {
+    position: absolute;
+    right: 1px;
+    bottom: 72px;
+
+    z-index: 6;
+
+    width: 725px;
+    height: auto;
+
+    object-fit: contain;
+}
