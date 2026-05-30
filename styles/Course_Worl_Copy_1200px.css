@@ -1,0 +1,697 @@
+@media (max-width: 1200px) {
+
+    :root {
+        --container: min(780px, calc(100% - 40px));
+        --green: #84AE19;
+        --dark: #2B2B2B;
+        --gray: #6E6E6E;
+    }
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    button,
+    input {
+        font-family: inherit;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    .navbar,
+    .rectangle,
+    .services,
+    .characteristiscs,
+    .features,
+    .catalogue,
+    .videomaterial,
+    .buttons-and-rectangle-for-review,
+    footer > .navbar {
+        width: var(--container);
+        max-width: var(--container);
+    }
+
+    header .navbar-list > li {
+        display: none;
+    }
+
+    header .navbar-list {
+        margin-left: auto;
+        gap: 0;
+    }
+
+    header .phone-number {
+        margin-left: 0;
+    }
+
+    header .navbar::after {
+        content: "";
+
+        flex-shrink: 0;
+
+        width: var(--burger-size);
+        height: var(--burger-size);
+
+        margin-left: var(--burger-gap);
+
+        display: block;
+
+        border-radius: 50%;
+        background-color: #FFFFFF;
+
+        background-image:
+            linear-gradient(var(--green), var(--green)),
+            linear-gradient(var(--green), var(--green)),
+            linear-gradient(var(--green), var(--green));
+
+        background-repeat: no-repeat;
+        background-size: var(--burger-line-width) var(--burger-line-height);
+        background-position:
+            center var(--burger-line-1),
+            center var(--burger-line-2),
+            center var(--burger-line-3);
+
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .text-buttons-and-picture > img {
+        display: none;
+    }
+
+    .characteristic-rectangle {
+        position: static;
+    }
+
+    footer .navbar-list-2 li:nth-last-child(2) {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   TABLET — 1200px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    :root {
+        --container: min(780px, calc(100% - 40px));
+
+        --burger-size: 68px;
+        --burger-gap: 35px;
+        --burger-line-width: 26px;
+        --burger-line-height: 3px;
+        --burger-line-1: 23px;
+        --burger-line-2: 33px;
+        --burger-line-3: 43px;
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
+        min-height: 635px;
+
+        background-image: url("images/header-image-2.png");
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+    }
+
+    .header-container {
+        min-height: 635px;
+    }
+
+    header .navbar {
+        height: 105px;
+    }
+
+    header .logo {
+        width: 82px;
+        height: auto;
+    }
+
+    header .phone-number {
+        gap: 10px;
+    }
+
+    header .phone-number img {
+        width: 24px;
+        height: 24px;
+    }
+
+    header .phone-number p {
+        font-size: 18px;
+        line-height: 1;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    .suburban-life,
+    .number-of-models,
+    .ready-to-make,
+    .get-a-present {
+        margin-left: calc((100% - var(--container)) / 2);
+    }
+
+    .suburban-life {
+        margin-top: 70px;
+
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .number-of-models {
+        max-width: 440px;
+
+        margin-top: 18px;
+
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .ready-to-make {
+        max-width: 430px;
+
+        margin-top: 28px;
+
+        font-size: 13px;
+        line-height: 21px;
+    }
+
+    .get-a-present {
+        width: 230px;
+        height: 58px;
+
+        margin-top: 22px;
+
+        font-size: 15px;
+    }
+
+
+    /* ================= ФОРМА ================= */
+
+    .look-at-bathhouses {
+        height: 420px;
+    }
+
+    .look-at-bathhouses-container {
+        padding-top: 105px;
+
+        background-image: url("images/tree.png");
+        background-repeat: no-repeat;
+        background-position: 145px 12px;
+        background-size: 300px auto;
+    }
+
+    .rectangle {
+        height: 255px;
+
+        border-radius: 10px;
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.09);
+    }
+
+    .text-buttons-and-picture {
+        display: block;
+    }
+
+    .text-and-buttons {
+        padding: 53px 39px 0;
+    }
+
+    .text-and-buttons > p {
+        font-size: 19px;
+        line-height: 25px;
+    }
+
+    .fields-and-button {
+        margin-top: 28px;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        gap: 21px;
+    }
+
+    .fields-and-button input {
+        width: 260px;
+        height: 56px;
+
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .fields-and-button button {
+        width: 204px;
+        height: 56px;
+
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+
+    /* ================= МЫ УВЕРЕНЫ ================= */
+
+    .we-are-sure {
+        min-height: 650px;
+
+        padding-top: 56px;
+        padding-bottom: 75px;
+    }
+
+    .we-are-sure > p {
+        margin-bottom: 46px;
+
+        font-size: 22px;
+        line-height: 29px;
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 23px 20px;
+    }
+
+    .service-rectangle {
+        width: 100%;
+        height: 155px;
+
+        padding: 24px 22px 0 21px;
+
+        border-radius: 10px;
+    }
+
+    .service-rectangle > div:first-child {
+        flex-basis: 36px;
+
+        width: 36px;
+        height: 36px;
+
+        margin-top: 2px;
+    }
+
+    .service-rectangle > div:first-child img {
+        max-width: 36px;
+        max-height: 36px;
+    }
+
+    .service-info {
+        margin-left: 17px;
+    }
+
+    .service-info h2 {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .service-info p {
+        margin-top: 12px;
+
+        font-size: 11px;
+        line-height: 17px;
+    }
+
+
+    /* ================= ХАРАКТЕРИСТИКИ ================= */
+
+    .characteristics-of-bathhouses {
+        height: 895px;
+
+        padding-top: 76px;
+
+        background-size: cover;
+        background-position: center bottom;
+    }
+
+    .characteristics-of-bathhouses > p {
+        width: var(--container);
+
+        margin: 0 auto;
+
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .characteristiscs {
+        height: auto;
+
+        margin-top: 57px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 23px 70px;
+    }
+
+    .characteristic-rectangle {
+        width: 100%;
+        height: 77px;
+
+        padding: 0 21px;
+
+        border-radius: 10px;
+    }
+
+    .characteristic-rectangle > div:first-child {
+        flex-basis: 34px;
+
+        width: 34px;
+        height: 34px;
+    }
+
+    .characteristic-rectangle > div:first-child img {
+        max-width: 34px;
+        max-height: 34px;
+    }
+
+    .characteristics-info {
+        margin-left: 14px;
+    }
+
+    .characteristics-info p {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .get-a-presentation {
+        width: 506px;
+        height: 64px;
+
+        bottom: 40px;
+
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+
+    /* ================= ОСОБЕННОСТИ ================= */
+
+    .features-of-scandinave-technologies {
+        min-height: 1615px;
+
+        padding-top: 63px;
+        padding-bottom: 95px;
+    }
+
+    .features-of-scandinave-technologies > p {
+        margin-bottom: 70px;
+
+        font-size: 22px;
+        line-height: 29px;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 31px;
+    }
+
+    .feature-rectangle {
+        width: 100%;
+        height: 326px;
+
+        padding: 31px 39px 30px;
+
+        border-radius: 10px;
+    }
+
+    .number-of-feature {
+        margin-bottom: 28px;
+    }
+
+    .feature-info h2 {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .feature-info p {
+        font-size: 12px;
+        line-height: 19px;
+        color: var(--gray);
+    }
+
+
+    /* ================= КАТАЛОГ ================= */
+
+    .catalogue-of-bathhouses {
+        min-height: auto;
+
+        padding-top: 57px;
+        padding-bottom: 85px;
+    }
+
+    .catalogue-of-bathhouses > h2 {
+        margin-bottom: 57px;
+
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    .catalogue {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 53px 31px;
+    }
+
+    .offer {
+        width: 100%;
+        height: 500px;
+    }
+
+    .offer > img:first-child {
+        height: 190px;
+    }
+
+    .offer > p {
+        font-size: 12px;
+        line-height: 22px;
+    }
+
+    .rectangle-1 {
+        width: 113px;
+    }
+
+    .price-and-buttons button {
+        width: 206px;
+    }
+
+    .rectangle-1 p,
+    .price-and-buttons button p {
+        font-size: 10px;
+        line-height: 13px;
+    }
+
+
+    /* ================= ВИДЕО ================= */
+
+    .videomaterial {
+        height: 410px;
+
+        margin-top: 83px;
+    }
+
+    .videomaterial > img:first-child {
+        height: 360px;
+    }
+
+    .display-video {
+        top: 120px;
+    }
+
+    .videomaterial::after {
+        top: 210px;
+
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .worker {
+        right: -15px;
+        bottom: 50px;
+
+        width: 430px;
+    }
+
+
+    /* ================= ПРОЕКТЫ ================= */
+
+    .projects {
+        min-height: 625px;
+
+        padding-top: 91px;
+        padding-bottom: 95px;
+    }
+
+    .projects > h2 {
+        margin-bottom: 61px;
+
+        font-size: 22px;
+        line-height: 29px;
+    }
+
+    .all-projects {
+        width: max-content;
+        max-width: none;
+
+        margin: 0;
+
+        display: flex;
+        gap: 70px;
+
+        transform: translateX(calc(50vw - 330px - 730px));
+    }
+
+    .project {
+        flex: 0 0 660px;
+
+        width: 660px;
+        height: 555px;
+    }
+
+
+    /* ================= ОТЗЫВЫ ================= */
+
+    .our-reviews {
+        min-height: 520px;
+
+        padding-top: 54px;
+    }
+
+    .our-reviews > h2 {
+        font-size: 22px;
+        line-height: 29px;
+    }
+
+    .buttons-and-rectangle-for-review {
+        width: 900px;
+        max-width: 900px;
+
+        margin-top: 48px;
+    }
+
+    .previous,
+    .next {
+        width: 43px;
+        height: 43px;
+    }
+
+    .review-rectangle {
+        width: 772px;
+        height: 320px;
+
+        padding: 26px;
+    }
+
+    .rectangle-for-text {
+        padding: 30px 34px 30px 35px;
+    }
+
+    .text-and-video {
+        width: 285px;
+    }
+
+    .text-and-video p1 {
+        font-size: 12px;
+        line-height: 19px;
+    }
+
+    .text-and-video p2 {
+        margin-top: 22px;
+
+        font-size: 11px;
+        line-height: 18px;
+    }
+
+    .text-and-video > img {
+        width: 52px;
+        height: 52px;
+
+        margin-top: 22px;
+    }
+
+    .video {
+        width: 320px;
+        height: 180px;
+    }
+
+    .display,
+    .display img {
+        width: 54px;
+        height: 54px;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    .footer-background {
+        height: 560px;
+    }
+
+    .footer-rectangle {
+        left: 50%;
+        top: 88px;
+
+        width: var(--container);
+        height: 405px;
+
+        padding: 43px 41px 38px;
+
+        transform: translateX(-50%);
+
+        grid-template-columns: 300px 260px;
+        column-gap: 80px;
+    }
+
+    .footer-rectangle > h2 {
+        font-size: 25px;
+        line-height: 32px;
+    }
+
+    .information > p {
+        font-size: 11px;
+        line-height: 14px;
+    }
+
+    .information > div p {
+        font-size: 13px;
+        line-height: 17px;
+    }
+
+    footer > .navbar {
+        height: 130px;
+
+        padding-left: 0;
+
+        justify-content: flex-start;
+    }
+
+    footer .logo {
+        width: 88px;
+        height: 76px;
+    }
+
+    footer .navbar-list-2 {
+        margin-left: 52px;
+
+        gap: 60px;
+
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    footer .navbar-list-2 li:nth-last-child(1) {
+        position: absolute;
+        left: 0;
+        top: 25px;
+
+        font-size: 14px;
+        line-height: 15px;
+    }
+}
