@@ -1,0 +1,861 @@
+@media (max-width: 767px) {
+
+    :root {
+        --container: min(345px, calc(100% - 28px));
+
+        --burger-size: 42px;
+        --burger-gap: 12px;
+        --burger-line-width: 16px;
+        --burger-line-height: 3px;
+        --burger-line-1: 13px;
+        --burger-line-2: 20px;
+        --burger-line-3: 27px;
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
+        min-height: 812px;
+
+        background-image: url("images/header-photo.png");
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+    }
+
+    .header-container {
+        min-height: 812px;
+    }
+
+    header .navbar {
+        width: 100%;
+        max-width: 375px;
+        height: 80px;
+
+        padding: 0 14px;
+    }
+
+    header .logo {
+        width: 53px;
+        height: auto;
+    }
+
+    header .phone-number {
+        gap: 5px;
+    }
+
+    header .phone-number img {
+        width: 12px;
+        height: 12px;
+    }
+
+    header .phone-number p {
+        font-size: 10px;
+        line-height: 1;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    .suburban-life,
+    .number-of-models,
+    .ready-to-make {
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: center;
+    }
+
+    .suburban-life {
+        width: min(315px, var(--container));
+
+        margin-top: 37px;
+
+        font-size: 27px;
+        line-height: 34px;
+    }
+
+    .number-of-models,
+    .ready-to-make {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .number-of-models {
+        width: min(295px, var(--container));
+
+        margin-top: 26px;
+    }
+
+    .ready-to-make {
+        width: min(314px, var(--container));
+
+        margin-top: 26px;
+    }
+
+    .get-a-present {
+        width: 232px;
+        height: 64px;
+
+        margin: 28px auto 0;
+
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 700;
+    }
+
+
+    /* ================= ФОРМА ================= */
+
+    .look-at-bathhouses {
+        height: 466px;
+    }
+
+    .look-at-bathhouses-container {
+        height: 100%;
+
+        padding-top: 43px;
+
+        background-image: none;
+    }
+
+    .rectangle {
+        height: 410px;
+
+        border-radius: 4px;
+    }
+
+    .text-and-buttons {
+        padding: 31px 20px 0;
+    }
+
+    .text-and-buttons > p {
+        width: min(270px, 100%);
+
+        margin: 0 auto;
+
+        font-size: 19px;
+        line-height: 24px;
+
+        text-align: center;
+    }
+
+    .fields-and-button {
+        margin-top: 24px;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .fields-and-button input {
+        width: min(292px, 100%);
+        height: 56px;
+
+        padding: 0 24px;
+
+        font-size: 11px;
+        line-height: 15px;
+
+        text-align: center;
+    }
+
+    .fields-and-button button {
+        width: 230px;
+        height: 60px;
+
+        margin-top: 16px;
+
+        font-size: 14px;
+    }
+
+
+    /* ================= МЫ УВЕРЕНЫ ================= */
+
+    .we-are-sure {
+        min-height: auto;
+
+        padding-top: 18px;
+        padding-bottom: 43px;
+    }
+
+    .we-are-sure > p {
+        width: min(260px, var(--container));
+
+        margin: 0 auto 14px;
+
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .services {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .service-rectangle {
+        width: 100%;
+        height: 125px;
+
+        padding: 17px 18px 0;
+
+        border-radius: 8px;
+    }
+
+    .service-rectangle > div:first-child {
+        flex-basis: 29px;
+
+        width: 29px;
+        height: 29px;
+
+        margin-top: 1px;
+    }
+
+    .service-rectangle > div:first-child img {
+        max-width: 29px;
+        max-height: 29px;
+    }
+
+    .service-info {
+        margin-left: 13px;
+    }
+
+    .service-info h2 {
+        font-size: 9px;
+        line-height: 13px;
+    }
+
+    .service-info p {
+        margin-top: 10px;
+
+        font-size: 8px;
+        line-height: 12px;
+    }
+
+
+    /* ================= ХАРАКТЕРИСТИКИ ================= */
+
+    .characteristics-of-bathhouses {
+        height: auto;
+
+        padding-top: 27px;
+        padding-bottom: 31px;
+
+        background-size: 760px auto;
+        background-position: center 268px;
+    }
+
+    .characteristics-of-bathhouses > p {
+        width: var(--container);
+
+        margin: 0 auto;
+
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .characteristiscs {
+        height: auto;
+
+        margin-top: 24px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+    }
+
+    .characteristic-rectangle {
+        width: 100%;
+        height: 72px;
+
+        padding: 0 22px;
+
+        border-radius: 10px;
+    }
+
+    .characteristic-rectangle:nth-child(4) {
+        margin-top: 260px;
+    }
+
+    .characteristic-rectangle > div:first-child {
+        flex-basis: 32px;
+
+        width: 32px;
+        height: 32px;
+    }
+
+    .characteristic-rectangle > div:first-child img {
+        max-width: 32px;
+        max-height: 32px;
+    }
+
+    .characteristics-info {
+        margin-left: 14px;
+    }
+
+    .characteristics-info p {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .get-a-presentation {
+        position: static;
+
+        width: min(340px, var(--container));
+        height: 56px;
+
+        margin: 24px auto 0;
+
+        display: block;
+
+        transform: none;
+
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+
+    /* ================= ОСОБЕННОСТИ ================= */
+
+    .features-of-scandinave-technologies {
+        min-height: auto;
+
+        padding-top: 29px;
+        padding-bottom: 38px;
+    }
+
+    .features-of-scandinave-technologies > p {
+        width: min(250px, var(--container));
+
+        margin: 0 auto 18px;
+
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .feature-rectangle {
+        width: 100%;
+        height: 255px;
+
+        padding: 22px 34px 25px;
+
+        border-radius: 9px;
+    }
+
+    .number-of-feature {
+        height: 48px;
+
+        margin-bottom: 22px;
+    }
+
+    .number-of-feature img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .number-of-feature p {
+        margin-left: 13px;
+
+        font-size: 43px;
+        line-height: 48px;
+    }
+
+    .feature-info h2 {
+        margin-bottom: 14px;
+
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .feature-info p {
+        font-size: 9px;
+        line-height: 15px;
+        color: var(--gray);
+    }
+
+
+    /* ================= КАТАЛОГ И ПРОЕКТЫ — СВАЙП ================= */
+
+    .catalogue-of-bathhouses {
+        min-height: auto;
+
+        padding-top: 47px;
+        padding-bottom: 48px;
+
+        overflow: hidden;
+    }
+
+    .catalogue-of-bathhouses > h2,
+    .projects > h2,
+    .our-reviews > h2 {
+        font-size: 25px;
+        line-height: 31px;
+    }
+
+    .catalogue-of-bathhouses > h2 {
+        margin-bottom: 28px;
+    }
+
+    .catalogue,
+    .all-projects {
+        --slide: min(332px, calc(100vw - 43px));
+
+        width: 100%;
+        max-width: none;
+
+        margin: 0;
+
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 18px;
+
+        padding-left: max(14px, calc((100vw - var(--slide)) / 2));
+        padding-right: max(14px, calc((100vw - var(--slide)) / 2));
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: max(14px, calc((100vw - var(--slide)) / 2));
+
+        transform: none;
+
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .catalogue::-webkit-scrollbar,
+    .all-projects::-webkit-scrollbar {
+        display: none;
+    }
+
+    .offer,
+    .project {
+        flex: 0 0 var(--slide);
+        width: var(--slide);
+
+        scroll-snap-align: center;
+    }
+
+    .offer {
+        height: 456px;
+    }
+
+    .offer > img:first-child {
+        height: 181px;
+    }
+
+    .name-and-characteristics {
+        padding: 20px 22px 0;
+    }
+
+    .people-amount,
+    .size {
+        margin-left: 10px;
+    }
+
+    .people-amount img,
+    .size img {
+        width: 11px;
+        height: 11px;
+    }
+
+    .people-amount p,
+    .size p {
+        font-size: 9px;
+        line-height: 12px;
+    }
+
+    .offer > p {
+        height: 142px;
+
+        margin: 13px 22px 0;
+
+        overflow: hidden;
+
+        font-size: 12px;
+        line-height: 23px;
+    }
+
+    .price-and-buttons {
+        margin: 22px 22px 0;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .rectangle-1,
+    .price-and-buttons button {
+        width: 100%;
+        height: 43px;
+    }
+
+
+    /* ================= ВИДЕО ================= */
+
+    .videomaterial {
+        height: 214px;
+
+        margin-top: 49px;
+
+        border-radius: 4px;
+    }
+
+    .videomaterial > img:first-child {
+        height: 181px;
+
+        border-radius: 4px;
+    }
+
+    .display-video {
+        top: 66px;
+
+        width: 48px;
+        height: 48px;
+    }
+
+    .display-video img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .videomaterial::after {
+        top: 126px;
+
+        width: 260px;
+
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .worker {
+        right: -4px;
+        bottom: 33px;
+
+        width: 126px;
+    }
+
+
+    /* ================= ПРОЕКТЫ ================= */
+
+    .projects {
+        min-height: auto;
+
+        padding-top: 41px;
+        padding-bottom: 51px;
+    }
+
+    .projects > h2 {
+        margin-bottom: 32px;
+    }
+
+    .project {
+        height: 432px;
+    }
+
+    .project > img:first-child {
+        height: 192px;
+    }
+
+    .project > p {
+        padding: 18px 22px 0;
+
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .options {
+        padding: 17px 22px 0;
+
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px 20px;
+    }
+
+    .option > p,
+    .znachenie p {
+        font-size: 9px;
+        line-height: 12px;
+    }
+
+    .znachenie img {
+        width: 13px;
+        height: 13px;
+    }
+
+    .to-be-known {
+        padding: 18px 22px 0;
+
+        display: block;
+    }
+
+    .to-be-known > p {
+        margin-bottom: 12px;
+
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .to-be-known > img {
+        display: none;
+    }
+
+    .rectangle-2 {
+        width: 214px;
+        height: 59px;
+
+        margin: 0;
+        padding-left: 15px;
+    }
+
+    .rectangle-2 p {
+        font-size: 8px;
+        line-height: 12px;
+    }
+
+    .rectangle-2 p span {
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+
+    /* ================= ОТЗЫВЫ ================= */
+
+    .our-reviews {
+        min-height: 421px;
+
+        padding-top: 31px;
+
+        overflow: hidden;
+    }
+
+    .buttons-and-rectangle-for-review {
+        position: relative;
+
+        margin-top: 26px;
+
+        display: block;
+    }
+
+    .previous,
+    .next {
+        display: none;
+    }
+
+    .review-rectangle {
+        position: relative;
+
+        width: 100%;
+        height: 315px;
+
+        padding: 0;
+
+        border-radius: 0;
+
+        background-color: transparent;
+
+        box-shadow: none;
+    }
+
+    .rectangle-for-text {
+        position: relative;
+
+        width: 100%;
+        height: 100%;
+
+        padding: 132px 15px 0;
+
+        display: block;
+
+        border: none;
+        border-radius: 0;
+
+        background-color: transparent;
+    }
+
+    .text-and-video {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .text-and-video p1 {
+        width: min(290px, 100%);
+
+        margin: 0 auto;
+
+        font-size: 12px;
+        line-height: 18px;
+
+        text-align: center;
+    }
+
+    .text-and-video p2 {
+        width: min(310px, 100%);
+
+        margin: 22px auto 0;
+
+        font-size: 10px;
+        line-height: 17px;
+
+        text-align: center;
+    }
+
+    .text-and-video > img {
+        position: absolute;
+        left: calc(50% - 90px);
+        top: 15px;
+
+        width: 58px;
+        height: 58px;
+
+        margin: 0;
+
+        z-index: 4;
+    }
+
+    .video {
+        position: absolute;
+        right: calc(50% - 88px);
+        top: 8px;
+
+        width: 74px;
+        height: 74px;
+
+        border-radius: 50%;
+
+        overflow: visible;
+
+        z-index: 5;
+    }
+
+    .video > img:first-child {
+        display: none;
+    }
+
+    .display,
+    .display img {
+        width: 74px;
+        height: 74px;
+    }
+
+    .review-rectangle::after {
+        content: "";
+
+        position: absolute;
+        left: 50%;
+        bottom: 21px;
+
+        width: 8px;
+        height: 8px;
+
+        transform: translateX(-50%);
+
+        border-radius: 50%;
+
+        background-color: var(--green);
+
+        box-shadow:
+            -22px 0 0 #E2E2E2,
+            22px 0 0 #E2E2E2;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    .footer-background {
+        height: 680px;
+    }
+
+    .footer-rectangle {
+        left: 50%;
+        top: 20px;
+
+        width: var(--container);
+        height: 425px;
+
+        padding: 29px 24px 24px;
+
+        display: block;
+
+        transform: translateX(-50%);
+
+        border-radius: 9px;
+    }
+
+    .footer-rectangle > h2 {
+        margin-bottom: 20px;
+
+        font-size: 25px;
+        line-height: 31px;
+    }
+
+    .information {
+        margin-bottom: 12px;
+    }
+
+    .information > p {
+        margin-bottom: 4px;
+
+        font-size: 9px;
+        line-height: 12px;
+    }
+
+    .information > div img {
+        width: 12px;
+        height: 12px;
+
+        margin-right: 6px;
+    }
+
+    .information > div p {
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    footer > .navbar {
+        width: 100%;
+        max-width: none;
+        height: 370px;
+
+        padding: 0;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    footer .logo {
+        width: 92px;
+        height: 80px;
+
+        margin-top: 28px;
+    }
+
+    footer .navbar-list-2 {
+        margin: 24px 0 0;
+        padding: 0;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        font-size: 13px;
+        line-height: 17px;
+    }
+
+    footer .navbar-list-2 li:nth-last-child(1) {
+        position: static;
+
+        margin-top: 18px;
+
+        font-size: 10px;
+        line-height: 14px;
+    }
+}
