@@ -1,1 +1,1160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уютный дом 64</title>
+    <link rel="stylesheet" href="Course_Work_Copy_MainPage.css">
+    <link rel="stylesheet" href="Course_Worl_Copy_1200px.css">
+    <link rel="stylesheet" href="Course_Work_Copy_375px.css">
+    <link rel="stylesheet" href="accessibility.css">
+</head>
+<body>
 
+    <div class="preloader" id="preloader">
+        <div class="preloader__logo">
+            <img src="images/logo.svg" alt="Уютный дом 64">
+            <div class="preloader__circle"></div>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <nav class="navbar">
+                <img class="logo" src="images/logo.svg" alt="Уютный дом 64">
+
+                <div class="navbar-list">
+                    <li>
+                        <button class="settings-button" id="settingsButton" type="button" data-i18n="settings">
+                            Настройки
+                        </button>
+                    </li>
+
+                    <li>
+                        <a class="authorization auth-link" href="auth.html" data-i18n="authorization">
+                            Авторизация
+                        </a>
+                    </li>
+
+                    <li>
+                        <button class="user-icon-button" id="userIconButton" type="button" aria-label="Профиль" data-i18n-aria="profile">
+                            👤
+                        </button>
+                    </li>
+
+                    <li>
+                        <a class="about-us" href="#about" data-i18n="nav-about">О нас</a>
+                    </li>
+
+                    <li>
+                        <a href="#catalogue" data-i18n="nav-catalogue">Каталог</a>
+                    </li>
+
+                    <li>
+                        <a href="#reviews" data-i18n="nav-reviews">Отзывы</a>
+                    </li>
+
+                    <li>
+                        <a href="#contacts" data-i18n="nav-contacts">Контакты</a>
+                    </li>
+
+                    <div class="phone-number">
+                        <img src="images/phone-logo.svg" alt="">
+                        <p>+375252253387</p>
+                    </div>
+                </div>
+
+                <button class="burger-button" id="burgerButton" type="button" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+
+            <p class="suburban-life" data-i18n-html="hero-title-html">
+                Комфортная загородная жизнь <br>
+                с каркасными банями в Саратове <br>
+                по скандинавской технологии <br>
+                от 7 дней
+            </p>
+
+            <p class="number-of-models" data-i18n-html="hero-models-html">
+                26 моделей на выбор или составление индивидуального <br>
+                проекта <span>БЕСПЛАТНО, дарим 2% от стоимости кешбеком</span>
+            </p>
+
+            <p class="ready-to-make" data-i18n-html="hero-present-html">
+                Прямо сейчас <span>мы готовы сделать вам</span> уникальное <br>
+                предложение и <span>подарить подарок</span>
+            </p>
+
+            <button class="get-a-present" data-i18n="take-present">Забрать подарок</button>
+        </div>
+    </header>
+
+    <div class="burger-overlay" id="burgerOverlay"></div>
+
+    <aside class="burger-menu" id="burgerMenu">
+        <img class="burger-menu__logo" src="images/logo.svg" alt="Уютный дом 64">
+
+        <nav class="burger-menu__nav">
+            <a href="#about" data-i18n="nav-about">О нас</a>
+            <a href="#catalogue" data-i18n="nav-catalogue">Каталог</a>
+            <a href="#reviews" data-i18n="nav-reviews">Отзывы</a>
+            <a href="#contacts" data-i18n="nav-contacts">Контакты</a>
+            <a href="catalogue.html" data-i18n="nav-catalogue">Каталог</a>
+            <a href="favorites.html">
+                <span data-i18n="nav-favorites">Избранное</span>: <span data-counter="favorites">0</span>
+            </a>
+            <a href="cart.html">
+                <span data-i18n="nav-cart">Корзина</span>: <span data-counter="cart">0</span>
+            </a>
+        </nav>
+    </aside>
+
+    <div class="settings-overlay" id="settingsOverlay"></div>
+
+    <aside class="settings-panel" id="settingsPanel">
+        <button class="settings-panel__close" id="settingsCloseButton" type="button">×</button>
+
+        <h2 data-i18n="settings">Настройки</h2>
+
+        <div class="settings-panel__group">
+            <p data-i18n="language">Язык</p>
+
+            <div class="settings-panel__buttons">
+                <button class="settings-option" data-lang-button="ru" type="button">RU</button>
+                <button class="settings-option" data-lang-button="en" type="button">EN</button>
+            </div>
+        </div>
+
+        <div class="settings-panel__group">
+            <p data-i18n="theme">Тема</p>
+
+            <div class="settings-panel__buttons">
+                <button class="settings-option" data-theme-button="light" type="button" data-i18n="light-theme">
+                    Светлая
+                </button>
+
+                <button class="settings-option" data-theme-button="dark" type="button" data-i18n="dark-theme">
+                    Тёмная
+                </button>
+            </div>
+        </div>
+
+        <div class="settings-panel__group">
+            <p data-i18n="vision-version">Версия для слабовидящих</p>
+
+            <div class="settings-panel__buttons">
+                <button class="settings-option" data-vision-button="on" type="button" data-i18n="yes">
+                    Да
+                </button>
+
+                <button class="settings-option" data-vision-button="off" type="button" data-i18n="no">
+                    Нет
+                </button>
+            </div>
+        </div>
+
+        <a class="settings-panel__admin admin-panel-link" href="admin.html" data-i18n="admin-panel">
+            Админ-панель
+        </a>
+
+        <button class="settings-panel__reset" id="resetUserSettingsButton" type="button" data-i18n="reset-settings">
+            Сбросить настройки
+        </button>
+    </aside>
+
+    <div class="profile-modal" id="profileModal">
+        <div class="profile-modal__content">
+            <button class="profile-modal__close" id="profileModalClose" type="button">×</button>
+
+            <h2 data-i18n="profile">Профиль</h2>
+
+            <form class="profile-form" id="profileForm">
+                <label>
+                    <span data-i18n="profile-phone">Телефон</span>
+                    <input id="profilePhone" type="text">
+                </label>
+
+                <label>
+                    <span>Email</span>
+                    <input id="profileEmail" type="email">
+                </label>
+
+                <label>
+                    <span data-i18n="first-name">Имя</span>
+                    <input id="profileFirstName" type="text">
+                </label>
+
+                <label>
+                    <span data-i18n="last-name">Фамилия</span>
+                    <input id="profileLastName" type="text">
+                </label>
+
+                <label>
+                    <span data-i18n="patronymic">Отчество</span>
+                    <input id="profilePatronymic" type="text">
+                </label>
+
+                <label>
+                    <span data-i18n="nickname">Никнейм</span>
+                    <input id="profileNickname" type="text" disabled>
+                </label>
+
+                <button class="profile-form__save" type="submit" data-i18n="save-profile">
+                    Сохранить
+                </button>
+
+                <button class="profile-form__logout" id="logoutButton" type="button" data-i18n="logout">
+                    Выйти
+                </button>
+
+                <p class="profile-message" id="profileMessage"></p>
+            </form>
+        </div>
+    </div>
+
+    <section class="look-at-bathhouses">
+        <div class="look-at-bathhouses-container">
+            <div class="rectangle">
+                <div class="text-buttons-and-picture">
+                    <div class="text-and-buttons">
+                        <p data-i18n-html="look-title-html">
+                            Посмотрите на наши бани <span>онлайн и оффлайн уже сегодня </span>
+                        </p>
+
+                        <div class="fields-and-button">
+                            <input 
+                                type="text" 
+                                name="username" 
+                                placeholder="Как к вам обращаться? (ФИО)*"
+                                data-i18n-placeholder="name-placeholder">
+
+                            <input 
+                                type="text" 
+                                phone="UserPhoneNumber" 
+                                placeholder="Ваш номер телефона*"
+                                data-i18n-placeholder="phone-placeholder">
+
+                            <button data-i18n="sign-up">Записаться</button>
+                        </div>
+                    </div>
+
+                    <img src="images/master.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="we-are-sure" id="about">
+        <p data-i18n-html="sure-title-html">
+            Мы уверены в себе так же, <span>как и 1170 наших клиентов</span>
+        </p>
+
+        <div class="services">
+            <div class="service-rectangle">
+                <div class="logo1">
+                    <img src="images/we-are-sure-logo-1.png" alt="">
+                </div>
+
+                <div class="service-info">
+                    <h2 data-i18n-html="service-1-title-html">
+                        <span> Реализуем любой проект</span> по вашим размерам и предпочтениям
+                    </h2>
+
+                    <p data-i18n="service-1-text">
+                        Если к вашей земле не проедет манипулятор, <br>
+                        мы также строим бани на участке
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-rectangle">
+                <div class="logo2">
+                    <img src="images/we-are-sure-logo-2.png" alt="">
+                </div>
+
+                <div class="service-info">
+                    <h2 data-i18n-html="service-2-title-html">
+                        Видеообзоры, <span>онлайн и оффлайн</span> <br>
+                        экскурсии по строительной <span>площадке</span>
+                    </h2>
+
+                    <p data-i18n="service-2-text">
+                        Мы знаем, как важно для вас качество, <br>
+                        поэтому честно показываем все этапы работы
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-rectangle">
+                <div class="logo3">
+                    <img src="images/we-are-sure-logo-3.png" alt="">
+                </div>
+
+                <div class="service-info">
+                    <h2 data-i18n-html="service-3-title-html">
+                        Предлагаем рассрочку от <span> 3 до 6 месяцев</span> <span> без посредников </span>
+                    </h2>
+
+                    <p data-i18n="service-3-text">
+                        Баня - не заоблачная мечта, а достижимая. <br>
+                        С рассрочкой ваша цель становится всё ближе.
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-rectangle">
+                <div class="logo4">
+                    <img src="images/we-are-sure-logo-4.png" alt="">
+                </div>
+
+                <div class="service-info">
+                    <h2 data-i18n-html="service-4-title-html">
+                        Выезжаем к вам на участок <span>бесплатно</span>
+                    </h2>
+
+                    <p data-i18n="service-4-text">
+                        Если есть сомнения, мы приедем и проверим <br>
+                        возможность проезда, осмотрим участок для <br>
+                        дальнейшей работы
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-rectangle">
+                <div class="logo5">
+                    <img src="images/we-are-sure-logo-5.png" alt="">
+                </div>
+
+                <div class="service-info">
+                    <h2 data-i18n-html="service-5-title-html">
+                        <span> 2% от </span> стоимости бани <span> возвращаем </span> <br>
+                        на кэшбэк
+                    </h2>
+
+                    <p data-i18n="service-5-text">
+                        Внедрили программу лояльности, чтобы вы <br>
+                        могли себе позволить чуть больше
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-rectangle">
+                <div class="logo6">
+                    <img src="images/we-are-sure-logo-6.png" alt="">
+                </div>
+
+                <div class="service-info">
+                    <h2 data-i18n-html="service-6-title-html">
+                        Гарантия на наши бани <span>от 1 до 5 лет </span>
+                    </h2>
+
+                    <p data-i18n="service-6-text">
+                        Несём ответственность за качество бани, <br>
+                        приобретённой у нас
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="characteristics-of-bathhouses">
+        <p data-i18n-html="characteristics-title-html">
+            Вентилируемый каркас обеспечивает срок службы <span> срок службы до 10 лет</span>
+        </p>
+
+        <div class="characteristiscs">
+            <div class="characteristic-rectangle">
+                <div class="characteristic-1">
+                    <img src="images/characteristics-logo-1.png" alt="">
+                </div>
+
+                <div class="characteristics-info">
+                    <p data-i18n-html="char-1-html">
+                        Разогрев температуры до 100С <br><span>от 1 до 5 лет </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="characteristic-rectangle">
+                <div class="characteristic-2">
+                    <img src="images/characterictics-logo-2.png" alt="">
+                </div>
+
+                <div class="characteristics-info">
+                    <p data-i18n-html="char-2-html">
+                        Держит тепло <span>до 20 часов </span> <br>Невероятная выдержка
+                    </p>
+                </div>
+            </div>
+
+            <div class="characteristic-rectangle">
+                <div class="characteristic-3">
+                    <img src="images/characteristics-logo-3.png" alt="">
+                </div>
+
+                <div class="characteristics-info">
+                    <p data-i18n-html="char-3-html">
+                        Низ бани обработан <span>битумной <br> мастикой</span> защищая от гниения
+                    </p>
+                </div>
+            </div>
+
+            <div class="characteristic-rectangle">
+                <div class="characteristic-4">
+                    <img src="images/characterictics-logo-4.png" alt="">
+                </div>
+
+                <div class="characteristics-info">
+                    <p data-i18n-html="char-4-html">
+                        Предоставляем гарантию <br><span>до 5 лет</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="characteristic-rectangle">
+                <div class="characteristic-5">
+                    <img src="images/characteriсtics-logo-5.png" alt="">
+                </div>
+
+                <div class="characteristics-info">
+                    <p data-i18n-html="char-5-html">
+                        Мобильные строения <span>не <br> облагаются</span> налогом
+                    </p>
+                </div>
+            </div>
+
+            <div class="characteristic-rectangle">
+                <div class="characteristic-6">
+                    <img src="images/characterictics-logo-6.png" alt="">
+                </div>
+
+                <div class="characteristics-info">
+                    <p data-i18n-html="char-6-html">
+                        Срок службы <span>1/4+века за счёт</span><br> скандинаской технологии
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <button class="get-a-presentation" data-i18n="get-presentation">
+            Получить видеопрезентацию в WhatsApp
+        </button>
+    </section>
+
+    <section class="features-of-scandinave-technologies">
+        <p data-i18n-html="features-title-html">
+            Особенности <span>скандинавской технологии</span>
+        </p>
+
+        <div class="features">
+            <div class="feature-rectangle">
+                <div class="number-of-feature">
+                    <img src="images/features-logo-1.png" alt="">
+                    <p>1</p>
+                </div>
+
+                <div class="feature-info">
+                    <h2 data-i18n="feature-1-title">Строгие формы строений</h2>
+                    <p data-i18n="feature-1-text">Баня будет удачно смотреться на любом участке</p>
+                </div>
+            </div>
+
+            <div class="feature-rectangle">
+                <div class="number-of-feature">
+                    <img src="images/features-logo-2.png" alt="">
+                    <p>2</p>
+                </div>
+
+                <div class="feature-info">
+                    <h2 data-i18n="feature-2-title">Практичность</h2>
+                    <p data-i18n="feature-2-text">
+                        При своевременном <br>прослушивании баня прослужит <br>и через 20 лет
+                    </p>
+                </div>
+            </div>
+
+            <div class="feature-rectangle">
+                <div class="number-of-feature">
+                    <img src="images/features-logo-3.png" alt="">
+                    <p>3</p>
+                </div>
+
+                <div class="feature-info">
+                    <h2 data-i18n="feature-3-title">Лёгкая возводимость</h2>
+                    <p data-i18n="feature-3-text">
+                        Баня лёгкие и не требуют подготавливать бетонный или свайный фундамент.
+                        Достаточно щебёночной/песочной подушки 10см и бетонных блоков
+                    </p>
+                </div>
+            </div>
+
+            <div class="feature-rectangle">
+                <div class="number-of-feature">
+                    <img src="images/features-logo-4.png" alt="">
+                    <p>4</p>
+                </div>
+
+                <div class="feature-info">
+                    <h2 data-i18n="feature-4-title">Экологичные материалы</h2>
+                    <p data-i18n="feature-4-text">
+                        Аллергия в такой бане не страшна,
+                        а поверхности безопасные и приятные на ощупь
+                    </p>
+                </div>
+            </div>
+
+            <div class="feature-rectangle">
+                <div class="number-of-feature">
+                    <img src="images/features-logo-5.png" alt="">
+                    <p>5</p>
+                </div>
+
+                <div class="feature-info">
+                    <h2 data-i18n="feature-5-title">Энергоэффективность</h2>
+                    <p data-i18n="feature-5-text">
+                        Использование в парном отделении фольгированной мембраны и утепления в 100 мм
+                        позволяет создать эффект термоса. За счёт этого экономится до 30%
+                        при протопке до 100 С
+                    </p>
+                </div>
+            </div>
+
+            <div class="feature-rectangle">
+                <div class="number-of-feature">
+                    <img src="images/features-logo-5.png" alt="">
+                    <p>6</p>
+                </div>
+
+                <div class="feature-info">
+                    <h2 data-i18n="feature-6-title">Эргономика</h2>
+                    <p data-i18n="feature-6-text">
+                        Эргономичное использование пространства. Каждый квадратный метр будет использоваться по назначению
+                    </p>
+                </div>
+            </div>
+
+            <div class="feature-rectangle">
+                <div class="number-of-feature">
+                    <img src="images/features-logo-5.png" alt="">
+                    <p>7</p>
+                </div>
+
+                <div class="feature-info">
+                    <h2 data-i18n="feature-7-title">Тепло и звукоизоляция</h2>
+                    <p data-i18n="feature-7-text">
+                        Баня держит до 20 часов и ваши секреты, сказанные в ней, в тайне
+                    </p>
+                </div>
+            </div>
+
+            <div class="feature-rectangle">
+                <div class="number-of-feature">
+                    <img src="images/features-logo-5.png" alt="">
+                    <p>8</p>
+                </div>
+
+                <div class="feature-info">
+                    <h2 data-i18n="feature-8-title">Ответственный подход</h2>
+                    <p data-i18n="feature-8-text">
+                        Проект продумывается полностью, потому что внесение, даже незначительное изменение
+                        сделает постройку непригодной к использованию или приведёт к ухудшению энергоэффективности
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalogue-of-bathhouses" id="catalogue">
+        <h2 data-i18n-html="catalogue-title-html">Каталог <span>бань</span></h2>
+
+        <div class="catalogue">
+            <div class="offer">
+                <img src="images/offer-1.png" alt="">
+
+                <div class="name-and-characteristics">
+                    <h2>Дачник</h2>
+
+                    <div class="people-amount">
+                        <img src="images/people-amount-logo.png" alt="">
+                        <p>2 чел</p>
+                    </div>
+
+                    <div class="size">
+                        <img src="images/size-logo.png" alt="">
+                        <p>1,65х2,2м</p>
+                    </div>
+                </div>
+
+                <p>
+                    Идеальный вариант для тех, у кого каждый кв.м земли на счету.
+                    Баня состоит из парного отделения и душа, ёмкость для воды на 200л уже идёт в комплекте.
+                    Теплоизоляционные материалы позволяют быстро разогреть баню и держать тепло до 20 часов.
+                </p>
+
+                <div class="price-and-buttons">
+                    <div class="rectangle-1">
+                        <p>От 5991,60р</p>
+                    </div>
+
+                    <button>
+                        <p data-i18n="unique-offer">Уникальное предложение</p>
+                    </button>
+                </div>
+            </div>
+
+            <div class="offer">
+                <img src="images/offer-2.png" alt="">
+
+                <div class="name-and-characteristics">
+                    <h2>Эконом</h2>
+
+                    <div class="people-amount">
+                        <img src="images/people-amount-logo.png" alt="">
+                        <p>2-3 чел</p>
+                    </div>
+
+                    <div class="size">
+                        <img src="images/size-logo.png" alt="">
+                        <p>2,4х3м</p>
+                    </div>
+                </div>
+
+                <p>
+                    Не дорогой и очень функциональный вариант.
+                    В комплектацию входит электрика, дровяная печь, бак для горячей воды,
+                    полки в парном помещении и отдельная раздевалка.
+                </p>
+
+                <div class="price-and-buttons">
+                    <div class="rectangle-1">
+                        <p>От 5991,60р</p>
+                    </div>
+
+                    <button>
+                        <p data-i18n="unique-offer">Уникальное предложение</p>
+                    </button>
+                </div>
+            </div>
+
+            <div class="offer">
+                <img src="images/offer-3.png" alt="">
+
+                <div class="name-and-characteristics">
+                    <h2>Баня 3м</h2>
+
+                    <div class="people-amount">
+                        <img src="images/people-amount-logo.png" alt="">
+                        <p>4 чел</p>
+                    </div>
+
+                    <div class="size">
+                        <img src="images/size-logo.png" alt="">
+                        <p>2,4х4м</p>
+                    </div>
+                </div>
+
+                <p>
+                    Отличное решение для небольшой семьи с возможностью использования круглый год.
+                    Мощное утепление стен, пола и потолка позволит сэкономить время и дрова.
+                </p>
+
+                <div class="price-and-buttons">
+                    <div class="rectangle-1">
+                        <p>От 5991,60р</p>
+                    </div>
+
+                    <button>
+                        <p data-i18n="unique-offer">Уникальное предложение</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <button class="all-offers" type="button" onclick="location.href='catalogue.html'" data-i18n="all-offers">
+            Все предложения
+        </button>
+
+        <div class="videomaterial">
+            <img src="images/video-background.png" alt="">
+            <button class="display-video">
+                <img src="images/button-background.png" alt="">
+            </button>
+            <img class="worker" src="images/worker.png" alt="">
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2 data-i18n-html="projects-title-html">Наши <span>проекты</span></h2>
+
+        <div class="all-projects">
+            <div class="project">
+                <img src="images/offer-1.png" alt="">
+                <p data-i18n="project-name">Баня под ключ с отделкой</p>
+
+                <div class="options">
+                    <div class="option">
+                        <p data-i18n="project-size">Габариты</p>
+                        <div class="znachenie">
+                            <img src="images/size-logo.png" alt="">
+                            <p>1,65 x 2,2м</p>
+                        </div>
+                    </div>
+
+                    <div class="option">
+                        <p data-i18n="project-material">Материал</p>
+                        <div class="znachenie">
+                            <img src="images/material.png" alt="">
+                            <p>Дерево, кирпич</p>
+                        </div>
+                    </div>
+
+                    <div class="option">
+                        <p data-i18n="project-thickness">Толщина</p>
+                        <div class="znachenie">
+                            <img src="images/size-logo.png" alt="">
+                            <p>1,65 x кк2,2м</p>
+                        </div>
+                    </div>
+
+                    <div class="option">
+                        <p data-i18n="project-capacity">Вместимость</p>
+                        <div class="znachenie">
+                            <img src="images/vmestimost.png" alt="">
+                            <p>1 человек</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="to-be-known">
+                    <p data-i18n="project-more">Узнать подробнее о проекте</p>
+                    <img src="images/direction.png" alt="">
+
+                    <div class="rectangle-2">
+                        <p data-i18n-html="project-liked-html">
+                            <span>Понравилась работа?</span> <br>
+                            Оставьте заявку и узнайте подробнее
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="images/offer-1.png" alt="">
+                <p data-i18n="project-name">Баня под ключ с отделкой</p>
+
+                <div class="options">
+                    <div class="option">
+                        <p data-i18n="project-size">Габариты</p>
+                        <div class="znachenie">
+                            <img src="images/size-logo.png" alt="">
+                            <p>1,65 x 2,2м</p>
+                        </div>
+                    </div>
+
+                    <div class="option">
+                        <p data-i18n="project-material">Материал</p>
+                        <div class="znachenie">
+                            <img src="images/material.png" alt="">
+                            <p>Дерево, кирпич</p>
+                        </div>
+                    </div>
+
+                    <div class="option">
+                        <p data-i18n="project-thickness">Толщина</p>
+                        <div class="znachenie">
+                            <img src="images/size-logo.png" alt="">
+                            <p>1,65 x кк2,2м</p>
+                        </div>
+                    </div>
+
+                    <div class="option">
+                        <p data-i18n="project-capacity">Вместимость</p>
+                        <div class="znachenie">
+                            <img src="images/vmestimost.png" alt="">
+                            <p>1 человек</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="to-be-known">
+                    <p data-i18n="project-more">Узнать подробнее о проекте</p>
+                    <img src="images/direction.png" alt="">
+
+                    <div class="rectangle-2">
+                        <p data-i18n-html="project-liked-html">
+                            <span>Понравилась работа?</span> <br>
+                            Оставьте заявку и узнайте подробнее
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="images/offer-1.png" alt="">
+                <p data-i18n="project-name">Баня под ключ с отделкой</p>
+
+                <div class="options">
+                    <div class="option">
+                        <p data-i18n="project-size">Габариты</p>
+                        <div class="znachenie">
+                            <img src="images/size-logo.png" alt="">
+                            <p>1,65 x 2,2м</p>
+                        </div>
+                    </div>
+
+                    <div class="option">
+                        <p data-i18n="project-material">Материал</p>
+                        <div class="znachenie">
+                            <img src="images/material.png" alt="">
+                            <p>Дерево, кирпич</p>
+                        </div>
+                    </div>
+
+                    <div class="option">
+                        <p data-i18n="project-thickness">Толщина</p>
+                        <div class="znachenie">
+                            <img src="images/size-logo.png" alt="">
+                            <p>1,65 x кк2,2м</p>
+                        </div>
+                    </div>
+
+                    <div class="option">
+                        <p data-i18n="project-capacity">Вместимость</p>
+                        <div class="znachenie">
+                            <img src="images/vmestimost.png" alt="">
+                            <p>1 человек</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="to-be-known">
+                    <p data-i18n="project-more">Узнать подробнее о проекте</p>
+                    <img src="images/direction.png" alt="">
+
+                    <div class="rectangle-2">
+                        <p data-i18n-html="project-liked-html">
+                            <span>Понравилась работа?</span> <br>
+                            Оставьте заявку и узнайте подробнее
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="images/offer-1.png" alt="">
+                <p data-i18n="project-name">Баня под ключ с отделкой</p>
+
+                <div class="options">
+                    <div class="option">
+                        <p data-i18n="project-size">Габариты</p>
+                        <div class="znachenie">
+                            <img src="images/size-logo.png" alt="">
+                            <p>1,65 x 2,2м</p>
+                        </div>
+                    </div>
+
+                    <div class="option">
+                        <p data-i18n="project-material">Материал</p>
+                        <div class="znachenie">
+                            <img src="images/material.png" alt="">
+                            <p>Дерево, кирпич</p>
+                        </div>
+                    </div>
+
+                    <div class="option">
+                        <p data-i18n="project-thickness">Толщина</p>
+                        <div class="znachenie">
+                            <img src="images/size-logo.png" alt="">
+                            <p>1,65 x кк2,2м</p>
+                        </div>
+                    </div>
+
+                    <div class="option">
+                        <p data-i18n="project-capacity">Вместимость</p>
+                        <div class="znachenie">
+                            <img src="images/vmestimost.png" alt="">
+                            <p>1 человек</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="to-be-known">
+                    <p data-i18n="project-more">Узнать подробнее о проекте</p>
+                    <img src="images/direction.png" alt="">
+
+                    <div class="rectangle-2">
+                        <p data-i18n-html="project-liked-html">
+                            <span>Понравилась работа?</span> <br>
+                            Оставьте заявку и узнайте подробнее
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-reviews" id="reviews">
+        <h2 data-i18n-html="reviews-title-html">Наши <span>отзывы</span></h2>
+
+        <div class="buttons-and-rectangle-for-review">
+            <button class="previous" type="button" aria-label="Предыдущий отзыв" data-i18n-aria="previous-review"></button>
+
+            <div class="review-rectangle">
+                <div class="rectangle-for-text">
+                    <div class="text-and-video">
+                        <p1 data-i18n="review-main-title">
+                            Если коротко - мы в восторге. Быстро
+                            и профессионально возвели нам нашу
+                            уютную баню
+                        </p1>
+
+                        <p2 data-i18n="review-main-text">
+                            В Уютный дом мы обратились всего три месяца
+                            назад, а уже сегодня мы записываем этот
+                            положительный отзыв сидя в своей новой бане!
+                        </p2>
+
+                        <img src="images/user-1.png" alt="">
+                    </div>
+
+                    <div class="video">
+                        <img src="images/review-video.png" alt="">
+                        <button class="display">
+                            <img src="images/button-background.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="next" type="button" aria-label="Следующий отзыв" data-i18n-aria="next-review"></button>
+        </div>
+
+        <button class="write-a-feedback" type="button" onclick="location.href='feedbacks.html'" data-i18n="write-feedback">
+            Оставить отзыв
+        </button>
+
+        <button class="all-feedbacks" type="button" onclick="location.href='feedbacks.html'" data-i18n="all-feedbacks">
+            Все отзывы
+        </button>
+    </section>
+
+    <section class="media-gallery" id="mediaGallery">
+        <h2 data-i18n-html="media-gallery-html">Медиа<span>галерея</span></h2>
+
+        <div class="media-gallery__content">
+            <div class="media-gallery__image-box">
+                <img id="galleryImage" src="images/gallery-1.jpg" alt="Галерея">
+
+                <button class="gallery-video-control" id="galleryVideoButton" type="button">
+                    ▶
+                </button>
+            </div>
+
+            <div class="media-gallery__controls">
+                <button id="randomImageButton" type="button" data-i18n="random-photo">Случайное фото</button>
+                <button id="soundToggleButton" type="button" data-i18n="play">Играть</button>
+
+                <label>
+                    <span data-i18n="volume">Громкость</span>
+                    <input id="volumeRange" type="range" min="0" max="1" step="0.1" value="0.5">
+                </label>
+
+                <p id="playerState" data-i18n="state-pause">Состояние: пауза</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section reveal-section" id="mapSection">
+        <h2 data-i18n-html="map-title-html">Как нас <span>найти</span></h2>
+
+        <div class="map-wrapper">
+            <iframe
+                src="https://yandex.ru/map-widget/v1/?ll=46.017321%2C51.592365&z=16&pt=46.017321,51.592365,pm2rdm"
+                width="100%"
+                height="100%"
+                frameborder="0"
+                allowfullscreen="true">
+            </iframe>
+        </div>
+    </section>
+
+    <footer id="contacts">
+        <div class="footer-background">
+            <div class="footer-rectangle">
+                <h2 data-i18n="contacts">Контакты</h2>
+
+                <div class="information">
+                    <p data-i18n="office-address">Адрес офиса в Саратове</p>
+                    <div>
+                        <img src="images/placement-logo.png" alt="">
+                        <p data-i18n="address-value">ул.Панфилова 53</p>
+                    </div>
+                </div>
+
+                <div class="information">
+                    <p data-i18n="phone">Телефон</p>
+                    <div>
+                        <img src="images/phone-logo.svg" alt="">
+                        <p>+375252253387</p>
+                    </div>
+                </div>
+
+                <div class="information">
+                    <p data-i18n="ogrn">ОГРН</p>
+                    <div>
+                        <img src="images/OGRN.png" alt="">
+                        <p>320645100031188</p>
+                    </div>
+                </div>
+
+                <div class="information">
+                    <p data-i18n="ip">ИП</p>
+                    <div>
+                        <img src="images/organizator.png" alt="">
+                        <p data-i18n="owner-name">Валиулин Руслан Надирович</p>
+                    </div>
+                </div>
+
+                <div class="information">
+                    <p data-i18n="email">Почта</p>
+                    <div>
+                        <img src="images/post-logo.png" alt="">
+                        <p>uyut-dom64@mail.ru</p>
+                    </div>
+                </div>
+
+                <div class="information">
+                    <p data-i18n="instagram">Инстаграм</p>
+                    <div>
+                        <img src="images/instagram-logo.png" alt="">
+                        <p>uyutdom64</p>
+                    </div>
+                </div>
+
+                <div class="information">
+                    <p data-i18n="vkontakte">ВКонтакте</p>
+                    <div>
+                        <img src="images/vkontakte-logo.png" alt="">
+                        <p>uyut_dom64</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <img class="logo" src="images/logo.svg" alt="Уютный дом 64">
+
+            <div class="navbar-list-2">
+                <li class="about-us-2">
+                    <a href="#about" data-i18n="nav-about">О нас</a>
+                </li>
+                <li>
+                    <a href="#catalogue" data-i18n="nav-catalogue">Каталог</a>
+                </li>
+                <li>
+                    <a href="#reviews" data-i18n="nav-reviews">Отзывы</a>
+                </li>
+                <li>
+                    <a href="#contacts" data-i18n="nav-contacts">Контакты</a>
+                </li>
+                <li data-i18n="nav-calculate">Рассчитать стоимость</li>
+                <li>|</li>
+                <li data-i18n="rights">© 2021 Все права защищены</li>
+            </div>
+        </nav>
+    </footer>
+    <div class="installment-modal" id="installmentModal">
+        <div class="installment-modal__content">
+            <button class="installment-modal__close" id="installmentModalClose" type="button">×</button>
+
+            <h2 class="installment-modal__title">
+                Можно <span>в рассрочку!</span>
+            </h2>
+
+            <p class="installment-modal__text">
+                Достаточно <strong>оплатить 40%</strong> от стоимости, а на оставшуюся часть
+                получить рассрочку на 3 месяца <strong>без посредников и %</strong>
+            </p>
+
+            <div class="installment-modal__grid">
+                <div class="installment-modal__item">
+                    <div class="installment-modal__icon">🏦</div>
+                    <p>40% предоплата и подписание договора</p>
+                </div>
+
+                <div class="installment-modal__item">
+                    <div class="installment-modal__icon">🛠️</div>
+                    <p>Строительство бани и прием работы</p>
+                </div>
+
+                <div class="installment-modal__item">
+                    <div class="installment-modal__icon">🏡</div>
+                    <p>Установка бани на ваш участок, прием работы</p>
+                </div>
+
+                <div class="installment-modal__item">
+                    <div class="installment-modal__icon">📄</div>
+                    <p>Передача документов, оплата 20%</p>
+                </div>
+            </div>
+
+            <button class="installment-modal__button" id="installmentShowPhoneButton" type="button">
+                Хочу баню в рассрочку
+            </button>
+
+            <form class="installment-modal__form" id="installmentForm">
+                <input
+                    id="installmentPhone"
+                    type="tel"
+                    placeholder="Ваш номер телефона"
+                >
+
+                <small id="installmentError"></small>
+
+                <button type="submit">
+                    Отправить заявку
+                </button>
+            </form>
+
+            <p class="installment-modal__success" id="installmentSuccess">
+                Спасибо! Мы свяжемся с вами позднее и расскажем подробнее об условиях рассрочки.
+            </p>
+        </div>
+    </div>
+    <div class="action-modal" id="actionModal">
+        <div class="action-modal__content">
+            <button class="action-modal__close" id="actionModalClose" type="button">×</button>
+
+            <h2 class="action-modal__title" id="actionModalTitle"></h2>
+
+            <p class="action-modal__text" id="actionModalText"></p>
+
+            <form class="action-modal__form" id="actionModalForm">
+                <input
+                    class="action-modal__input"
+                    id="actionModalPhone"
+                    type="tel"
+                    placeholder="Ваш номер телефона"
+                >
+
+                <small class="action-modal__error" id="actionModalError"></small>
+
+                <button class="action-modal__submit" type="submit">
+                    Отправить
+                </button>
+            </form>
+
+            <button class="action-modal__button" id="actionModalButton" type="button">
+                Отлично
+            </button>
+        </div>
+    </div>
+
+    <script src="translate.js"></script>
+    <script src="auth-state.js"></script>
+    <script src="main-interactions.js"></script>
+</body>
+</html>
