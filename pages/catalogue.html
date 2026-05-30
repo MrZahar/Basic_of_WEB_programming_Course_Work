@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог бань</title>
+
+    <link rel="stylesheet" href="catalogue.css">
+</head>
+<body>
+
+<header class="catalog-header">
+    <nav class="catalog-navbar">
+        <a href="Course_Work_Copy_MainPage.html">
+            <img class="catalog-logo" src="images/logo.svg" alt="Уютный дом 64">
+        </a>
+
+        <div class="catalog-header-links">
+            <button class="settings-button" id="settingsButton" type="button" data-i18n="settings">
+                Настройки
+            </button>
+
+            <a class="auth-link" href="auth.html" data-i18n="authorization">
+                Авторизация
+            </a>
+
+            <button class="user-icon-button" id="userIconButton" type="button" aria-label="Профиль" data-i18n-aria="profile">
+                👤
+            </button>
+
+            <a class="back-to-main" href="favorites.html">
+                <span data-i18n="nav-favorites">Избранное</span>: <span id="favoritesCount" data-counter="favorites">0</span>
+            </a>
+
+            <a class="back-to-main" href="cart.html">
+                <span data-i18n="nav-cart">Корзина</span>: <span id="cartCount" data-counter="cart">0</span>
+            </a>
+
+            <a class="back-to-main" href="Course_Work_Copy_MainPage.html" data-i18n="back-main">
+                На главную
+            </a>
+        </div>
+    </nav>
+</header>
+
+<div class="settings-overlay" id="settingsOverlay"></div>
+
+<aside class="settings-panel" id="settingsPanel">
+    <button class="settings-panel__close" id="settingsCloseButton" type="button">×</button>
+
+    <h2 data-i18n="settings">Настройки</h2>
+
+    <div class="settings-panel__group">
+        <p data-i18n="language">Язык</p>
+
+        <div class="settings-panel__buttons">
+            <button class="settings-option" data-lang-button="ru" type="button">RU</button>
+            <button class="settings-option" data-lang-button="en" type="button">EN</button>
+        </div>
+    </div>
+
+    <div class="settings-panel__group">
+        <p data-i18n="theme">Тема</p>
+
+        <div class="settings-panel__buttons">
+            <button class="settings-option" data-theme-button="light" type="button" data-i18n="light-theme">
+                Светлая
+            </button>
+
+            <button class="settings-option" data-theme-button="dark" type="button" data-i18n="dark-theme">
+                Тёмная
+            </button>
+        </div>
+    </div>
+
+    <div class="settings-panel__group">
+        <p data-i18n="vision-version">Версия для слабовидящих</p>
+
+        <div class="settings-panel__buttons">
+            <button class="settings-option" data-vision-button="on" type="button" data-i18n="yes">
+                Да
+            </button>
+
+            <button class="settings-option" data-vision-button="off" type="button" data-i18n="no">
+                Нет
+            </button>
+        </div>
+    </div>
+
+    <a class="settings-panel__admin admin-panel-link" href="admin.html" data-i18n="admin-panel">
+        Админ-панель
+    </a>
+
+    <button class="settings-panel__reset" id="resetUserSettingsButton" type="button" data-i18n="reset-settings">
+        Сбросить настройки
+    </button>
+</aside>
+
+<div class="profile-modal" id="profileModal">
+    <div class="profile-modal__content">
+        <button class="profile-modal__close" id="profileModalClose" type="button">×</button>
+
+        <h2 data-i18n="profile">Профиль</h2>
+
+        <form class="profile-form" id="profileForm">
+            <label>
+                <span data-i18n="profile-phone">Телефон</span>
+                <input id="profilePhone" type="text">
+            </label>
+
+            <label>
+                <span>Email</span>
+                <input id="profileEmail" type="email">
+            </label>
+
+            <label>
+                <span data-i18n="first-name">Имя</span>
+                <input id="profileFirstName" type="text">
+            </label>
+
+            <label>
+                <span data-i18n="last-name">Фамилия</span>
+                <input id="profileLastName" type="text">
+            </label>
+
+            <label>
+                <span data-i18n="patronymic">Отчество</span>
+                <input id="profilePatronymic" type="text">
+            </label>
+
+            <label>
+                <span data-i18n="nickname">Никнейм</span>
+                <input id="profileNickname" type="text" disabled>
+            </label>
+
+            <button class="profile-form__save" type="submit" data-i18n="save-profile">
+                Сохранить
+            </button>
+
+            <button class="profile-form__logout" id="logoutButton" type="button" data-i18n="logout">
+                Выйти
+            </button>
+
+            <p class="profile-message" id="profileMessage"></p>
+        </form>
+    </div>
+</div>
+
+<main class="catalog-page">
+    <section class="catalog-container">
+        <h1 data-i18n-html="catalogue-page-title-html">
+            Каталог <span>бань</span>
+        </h1>
+
+        <div class="catalog-actions">
+            <button id="showAllButton" type="button" data-i18n="whole-catalogue">
+                Весь каталог
+            </button>
+        </div>
+
+        <div class="catalog-controls">
+            <input 
+                id="searchInput" 
+                type="text" 
+                placeholder="Поиск по названию, описанию, категории"
+                data-i18n-placeholder="search-placeholder">
+
+            <select id="sortSelect">
+                <option value="" data-i18n="no-sort">Без сортировки</option>
+                <option value="price-asc" data-i18n="sort-price-asc">Цена по возрастанию</option>
+                <option value="price-desc" data-i18n="sort-price-desc">Цена по убыванию</option>
+                <option value="title-asc" data-i18n="sort-title-asc">Название А-Я</option>
+                <option value="title-desc" data-i18n="sort-title-desc">Название Я-А</option>
+                <option value="rating-asc" data-i18n="sort-rating-asc">Рейтинг по возрастанию</option>
+                <option value="rating-desc" data-i18n="sort-rating-desc">Рейтинг по убыванию</option>
+            </select>
+        </div>
+
+        <div class="catalog-filters">
+            <input 
+                id="minPriceInput" 
+                type="number" 
+                placeholder="Цена от"
+                data-i18n-placeholder="min-price-placeholder">
+
+            <input 
+                id="maxPriceInput" 
+                type="number" 
+                placeholder="Цена до"
+                data-i18n-placeholder="max-price-placeholder">
+
+            <input 
+                id="minRatingInput" 
+                type="number" 
+                step="0.1" 
+                placeholder="Рейтинг от"
+                data-i18n-placeholder="min-rating-placeholder">
+
+            <input 
+                id="maxPeopleInput" 
+                type="number" 
+                placeholder="До человек"
+                data-i18n-placeholder="max-people-placeholder">
+
+            <input 
+                id="minWarrantyInput" 
+                type="number" 
+                placeholder="Гарантия от"
+                data-i18n-placeholder="min-warranty-placeholder">
+
+            <input 
+                id="minHeatInput" 
+                type="number" 
+                placeholder="Тепло от, ч"
+                data-i18n-placeholder="min-heat-placeholder">
+
+            <button id="resetFiltersButton" type="button" data-i18n="reset">
+                Сбросить
+            </button>
+        </div>
+
+        <div class="category-list" id="categoryList"></div>
+
+        <p class="request-info" id="requestInfo"></p>
+
+        <div class="catalog-cards" id="catalogCards"></div>
+
+        <p class="empty-message" id="emptyMessage" data-i18n="no-products">
+            По заданным критериям товары не найдены.
+        </p>
+
+        <div class="pagination" id="pagination"></div>
+    </section>
+</main>
+
+<div class="product-modal" id="productModal">
+    <div class="product-modal__content">
+        <button class="product-modal__close" id="productModalClose" type="button">×</button>
+
+        <img id="productModalImage" src="" alt="">
+
+        <div class="product-modal__info">
+            <h2 id="productModalTitle"></h2>
+
+            <p id="productModalDescription"></p>
+
+            <ul>
+                <li>
+                    <span data-i18n="category">Категория</span>: 
+                    <span id="productModalCategory"></span>
+                </li>
+
+                <li>
+                    <span data-i18n="price">Цена</span>: 
+                    <span id="productModalPrice"></span>
+                </li>
+
+                <li>
+                    <span data-i18n="capacity">Вместимость</span>: 
+                    <span id="productModalPeople"></span>
+                </li>
+
+                <li>
+                    <span data-i18n="size">Размер</span>: 
+                    <span id="productModalSize"></span>
+                </li>
+
+                <li>
+                    <span data-i18n="rating">Рейтинг</span>: 
+                    <span id="productModalRating"></span>
+                </li>
+
+                <li>
+                    <span data-i18n="warranty">Гарантия</span>: 
+                    <span id="productModalWarranty"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="translate.js"></script>
+<script src="auth-state.js"></script>
+<script src="catalogue.js"></script>
+</body>
+</html>
